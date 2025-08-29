@@ -1,7 +1,6 @@
 # Software-Projekt
 This is our readme</break>
-
-For Install see
+For Install see</break>
 For Troubleshooting see
 
 # Core concept
