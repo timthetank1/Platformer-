@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    float dx = 0f;
+    /*float dx = 0f;
     float dy = 0f;
     float gravity = -50f;
     void Start()
@@ -17,5 +17,5 @@ public class CharacterMovement : MonoBehaviour
         transform.Translate(new Vector3(dx, dy, 0) * Time.deltaTime);
         dy += gravity * Time.deltaTime; 
 
-    }
+    }*/
 }
