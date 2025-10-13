@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    Rigidbody RigidBody;
     void Start()
     {
         RigidBody = GetComponent <RigidBody>();
