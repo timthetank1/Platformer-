@@ -3,19 +3,13 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    /*float dx = 0f;
-    float dy = 0f;
-    float gravity = -50f;
     void Start()
     {
-        transform.position = new Vector3(-200, 0, 0); 
+        RigidBody = GetComponent <RigidBody>();
     }
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(new Vector3(dx, dy, 0) * Time.deltaTime);
-        dy += gravity * Time.deltaTime; 
-
-    }*/
+        RigidBody.AddForce(new Vector2(10f, 0f));
+    }
 }
+ 
