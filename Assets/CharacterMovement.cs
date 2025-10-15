@@ -6,6 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector3 direction;
+    private Vector2 input; 
 
     private void Start()
     {
@@ -13,10 +14,10 @@ public class CharacterMovement : MonoBehaviour
     }
     private void Update()
     {
-        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
     private void FixedUpdate()
     {
-
+        rb.linearVelocity= input * 10;
     }
 }
