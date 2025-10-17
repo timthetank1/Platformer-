@@ -14,8 +14,8 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(dx, dy, 0) * Time.deltaTime);
-        dy += gravity * Time.deltaTime; 
+        //transform.Translate(new Vector3(dx, dy, 0) * Time.deltaTime);
+        //dy += gravity * Time.deltaTime; -
 
     }
 }
