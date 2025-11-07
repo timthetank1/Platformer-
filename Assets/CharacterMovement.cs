@@ -1,21 +1,27 @@
 using Unity.Hierarchy;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
-    float dx = 0f;
-    float dy = 0f;
-    float gravity = -50f;
+    public Rigidbody2D rb;
+    public float speed = 10f;
+    public float jumpForce = 5f;
+
+
     void Start()
     {
-        transform.position = new Vector3(0, 0, 0); 
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(new Vector3(dx, dy, 0) * Time.deltaTime);
-        //dy += gravity * Time.deltaTime; -
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+        Vector2 dir = new Vector2(x, y);
+        rb.linearVelocity = dir * speed;
+        ;
 
     }
 }
