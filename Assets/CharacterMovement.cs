@@ -8,7 +8,7 @@ public class CharacterMovement : MonoBehaviour
     float gravity = -50f;
     void Start()
     {
-        transform.position = new Vector3(-200, 0, 0); 
+        transform.position = new Vector3(0, 0, 0); 
     }
 
     // Update is called once per frame
