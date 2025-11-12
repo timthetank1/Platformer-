@@ -1,6 +1,7 @@
 using Unity.Hierarchy;
 using UnityEngine;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -11,6 +12,12 @@ using UnityEngine.InputSystem;
 using System;
 
 public class CharacterMovement : MonoBehaviour
+=======
+using UnityEngine.InputSystem;
+using System;
+
+public class CharacterMovement : MonoBehaviour
+>>>>>>> Stashed changes
 { 
     public Rigidbody2D rb;
     public InputAction controls;
@@ -24,8 +31,11 @@ public class CharacterMovement : MonoBehaviour
     void FixedUpdate()
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         RigidBody.AddForce(new Vector2(10f, 0f));
 =======
+=======
+>>>>>>> Stashed changes
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         Vector2 dir = new Vector2(x, y);
@@ -34,6 +44,9 @@ public class CharacterMovement : MonoBehaviour
     private void FixedUpdate()
     {
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }
