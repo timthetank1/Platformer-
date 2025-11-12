@@ -1,27 +1,36 @@
+using System.Runtime.CompilerServices;
 using Unity.Hierarchy;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float speed = 10f;
-    public float jumpForce = 5f;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float jumpForce = 5f;
 
 
-    void Start()
+    [SerializeField] public InputActionReference move;
+
+
+    private float x;
+    private float y;
+    private Vector2 InputDir;
+    private Vector2 dir;
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        Vector2 dir = new Vector2(x, y);
-        rb.linearVelocity = dir * speed;
-        ;
+        InputDir = move.action.ReadValue<Vector2>();
+        x = InputDir[0];
+        y = InputDir[1];
+
+        Vector2 dir = new Vector2(x * speed, y * speed);
+        rb.linearVelocity = dir;
 
     }
 }
