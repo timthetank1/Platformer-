@@ -11,6 +11,7 @@ public class CharacterMovement : MonoBehaviour
 
 
     [SerializeField] public InputActionReference move;
+    [SerializeField] public InputActionReference jump;
 
 
     private float x;
@@ -23,13 +24,12 @@ public class CharacterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         InputDir = move.action.ReadValue<Vector2>();
         x = InputDir[0];
-        y = InputDir[1];
-
-        Vector2 dir = new Vector2(x * speed, y * speed);
+        
+        Vector2 dir = new Vector2(x * speed, rb.linearVelocityY);
         rb.linearVelocity = dir;
 
     }
