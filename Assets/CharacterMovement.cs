@@ -16,12 +16,24 @@ public class CharacterMovement : MonoBehaviour
 using UnityEngine.InputSystem;
 using System;
 
+<<<<<<< Updated upstream
 public class CharacterMovement : MonoBehaviour
 >>>>>>> Stashed changes
 { 
     public Rigidbody2D rb;
     public InputAction controls;
     public float speed = 100;
+=======
+    [SerializeField] public InputActionReference move;
+    [SerializeField] public InputActionReference jump;
+
+
+    private float x;
+    private float y;
+    private Vector2 InputDir;
+    private Vector2 dir;
+    private float JumpDir;  
+>>>>>>> Stashed changes
 
     private void Start()
 >>>>>>> Stashed changes
@@ -43,6 +55,22 @@ public class CharacterMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+<<<<<<< Updated upstream
+=======
+        if
+            jumpForce = 0
+        else
+
+                    
+        InputDir = move.action.ReadValue<Vector2>();
+        x = InputDir[0];
+
+        JumpDir = jump.action.ReadValue<float>();
+        y = JumpDir * jumpForce;
+
+        Vector2 dir = new Vector2(x * speed, rb.linearVelocityY + y);
+        rb.linearVelocity = dir;
+>>>>>>> Stashed changes
 
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
