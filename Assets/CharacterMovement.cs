@@ -33,6 +33,9 @@ public class CharacterMovement : MonoBehaviour
     private Vector2 InputDir;
     private Vector2 dir;
     private float JumpDir;  
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     private void Start()
@@ -56,7 +59,10 @@ public class CharacterMovement : MonoBehaviour
     private void FixedUpdate()
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
         if
             jumpForce = 0
         else
@@ -64,6 +70,15 @@ public class CharacterMovement : MonoBehaviour
                     
         InputDir = move.action.ReadValue<Vector2>();
         x = InputDir[0];
+<<<<<<< Updated upstream
+=======
+
+        JumpDir = jump.action.ReadValue<float>();
+        y = JumpDir * jumpForce;
+
+        Vector2 dir = new Vector2(x * speed, rb.linearVelocityY + y);
+        rb.linearVelocity = dir;
+>>>>>>> Stashed changes
 
         JumpDir = jump.action.ReadValue<float>();
         y = JumpDir * jumpForce;

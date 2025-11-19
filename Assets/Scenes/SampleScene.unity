@@ -159,7 +159,11 @@ Transform:
   m_GameObject: {fileID: 134405101}
   serializedVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LocalRotation: {x: -0, y: -0, z: 0.90636337, w: 0.42249915}
+=======
+  m_LocalRotation: {x: -0, y: -0, z: 0.9063616, w: 0.42250308}
+>>>>>>> Stashed changes
 =======
   m_LocalRotation: {x: -0, y: -0, z: 0.9063616, w: 0.42250308}
 >>>>>>> Stashed changes
@@ -328,11 +332,19 @@ PrefabInstance:
     - target: {fileID: -9199587520279353415, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.98485106
       objectReference: {fileID: 0}
     - target: {fileID: -9199587520279353415, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.17340252
+=======
+      value: 0.9848455
+      objectReference: {fileID: 0}
+    - target: {fileID: -9199587520279353415, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17343396
+>>>>>>> Stashed changes
 =======
       value: 0.9848455
       objectReference: {fileID: 0}
@@ -352,7 +364,11 @@ PrefabInstance:
     - target: {fileID: -8851691579000271137, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.6519841
+=======
+      value: 0.65198386
+>>>>>>> Stashed changes
 =======
       value: 0.65198386
 >>>>>>> Stashed changes
@@ -504,7 +520,11 @@ PrefabInstance:
     - target: {fileID: -4556773201673360888, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: -0.36162293
+=======
+      value: -0.36162397
+>>>>>>> Stashed changes
 =======
       value: -0.36162397
 >>>>>>> Stashed changes
@@ -520,7 +540,11 @@ PrefabInstance:
     - target: {fileID: -4556773201673360888, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.93232447
+=======
+      value: 0.93232405
+>>>>>>> Stashed changes
 =======
       value: 0.93232405
 >>>>>>> Stashed changes
@@ -640,7 +664,11 @@ PrefabInstance:
     - target: {fileID: 3116539155574195476, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.22859272
+=======
+      value: 0.22860107
+>>>>>>> Stashed changes
 =======
       value: 0.22860107
 >>>>>>> Stashed changes
@@ -656,7 +684,11 @@ PrefabInstance:
     - target: {fileID: 3116539155574195476, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 0.9735222
+=======
+      value: 0.9735202
+>>>>>>> Stashed changes
 =======
       value: 0.9735202
 >>>>>>> Stashed changes
@@ -716,7 +748,11 @@ PrefabInstance:
     - target: {fileID: 6618869993906433886, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: -0.82583827
+=======
+      value: -0.82584006
+>>>>>>> Stashed changes
 =======
       value: -0.82584006
 >>>>>>> Stashed changes
@@ -1368,7 +1404,11 @@ Transform:
   m_GameObject: {fileID: 657207776}
   serializedVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LocalRotation: {x: -0, y: -0, z: -0.7215565, w: -0.69235563}
+=======
+  m_LocalRotation: {x: -0, y: -0, z: -0.72154033, w: -0.6923725}
+>>>>>>> Stashed changes
 =======
   m_LocalRotation: {x: -0, y: -0, z: -0.72154033, w: -0.6923725}
 >>>>>>> Stashed changes
@@ -1403,7 +1443,11 @@ Transform:
   m_GameObject: {fileID: 684194827}
   serializedVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LocalRotation: {x: -0, y: -0, z: -0.9970082, w: -0.07729657}
+=======
+  m_LocalRotation: {x: -0, y: -0, z: -0.99700814, w: -0.07729687}
+>>>>>>> Stashed changes
 =======
   m_LocalRotation: {x: -0, y: -0, z: -0.99700814, w: -0.07729687}
 >>>>>>> Stashed changes
