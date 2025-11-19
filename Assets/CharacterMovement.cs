@@ -16,6 +16,7 @@ public class CharacterMovement : MonoBehaviour
 
     private float x;
     private float y;
+    private float JumpDir;
     private Vector2 InputDir;
     private Vector2 dir;
 
@@ -28,9 +29,16 @@ public class CharacterMovement : MonoBehaviour
     {
         InputDir = move.action.ReadValue<Vector2>();
         x = InputDir[0];
-        
-        Vector2 dir = new Vector2(x * speed, rb.linearVelocityY);
+        JumpDir = jump.action.ReadValue<float>();
+        y = JumpDir * jumpForce;
+
+
+
+
+        Vector2 dir = new Vector2(x * speed, rb.linearVelocityY + y);
         rb.linearVelocity = dir;
 
     }
+
+    
 }
