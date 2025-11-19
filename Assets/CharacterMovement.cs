@@ -63,10 +63,7 @@ public class CharacterMovement : MonoBehaviour
 =======
 =======
 >>>>>>> Stashed changes
-        if
-            jumpForce = 0
-        else
-
+      
                     
         InputDir = move.action.ReadValue<Vector2>();
         x = InputDir[0];
