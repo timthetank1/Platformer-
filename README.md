@@ -7,7 +7,8 @@ Dies ist ein Softwareprojekt, welches Unity in C# verwendet. Basis des Projekts 
 # Installation:
 Gehen sie auf Unity.com/de/download und drücken sie auf "Für Mac herunterladen"<br>
 Öffnen sie die heruntergeladene Datei und folgen sie den Schritten um eine Installation zu ermöglichen<br>
-Wichtig hierbei ist, das die Editor Version auf 6000.2.8f1 gesetzt ist.<br>
+Bei der Frage nach einem Editor, wählen sie die neuste Version von VSCode aus. <br>
+Wichtig hierbei ist, das die Unity Editor Version auf 6000.2.8f1 gesetzt ist.<br>
 Wenn Unity Hub geöffnet ist, dan klicken sie auf "add" neben dem "new Project" Knopf<br>
 Hier klicken sie "add Project from Disk"<br>
 Stecken sie den USB Stick ein und wählen sie diesen den darin enthalten Ordner "Final-Project" aus.<br>
