@@ -739,12 +739,6 @@ PrefabInstance:
       addedObject: {fileID: 403564488}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 403564490}
-    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 403564494}
-    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 403564491}
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       insertIndex: -1
@@ -752,6 +746,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 403564493}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 403564494}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 403564495}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
 --- !u!1 &403564487 stripped
 GameObject:
@@ -791,24 +791,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: e32d02e193c6a0141bff89ca9b11c6c2, type: 3}
   m_PrefabInstance: {fileID: 403564486}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &403564490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403564487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ec0a5e657927224989fb3e18de84640, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  rb: {fileID: 403564492}
-  speed: 20
-  jumpForce: 25
-  move: {fileID: -5276092412129271900, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
-  jump: {fileID: 8502490214899685529, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
-  coll: {fileID: 0}
 --- !u!70 &403564491
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -918,13 +900,27 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
-  onGround: 0
-  onWall: 0
-  wallSide: 0
   collisionRadius: 0.35
   bottomOffset: {x: 0, y: -0.1}
   rightOffset: {x: 0.1, y: 0}
   leftOffset: {x: -0.1, y: 0}
+--- !u!114 &403564495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403564487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e182c7a84018de74f93c19d533e2f266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateManager
+  coll: {fileID: 403564494}
+  rb: {fileID: 403564492}
+  trans: {fileID: 403564489}
+  move: {fileID: -5276092412129271900, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
+  jump: {fileID: 8502490214899685529, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
 --- !u!1 &441017347
 GameObject:
   m_ObjectHideFlags: 0
