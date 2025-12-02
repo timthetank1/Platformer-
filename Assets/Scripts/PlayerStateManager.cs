@@ -16,11 +16,12 @@ public class PlayerStateManager : MonoBehaviour {
     public Vector2 inputDir { get; private set; }
     public float inputX     { get; private set; }
     public float inputY     { get; private set; }
-    public int lastX      { get; private set; }
+    public int lastX        { get; private set; }
 
     public PlayerAbstractState currentState;
     public PlayerWalkingState walkingState = new PlayerWalkingState();
     public PlayerCrawlingState crawlingState = new PlayerCrawlingState();
+    public PlayerAirborneState airborneState = new PlayerAirborneState();
 
 
 
@@ -31,6 +32,8 @@ public class PlayerStateManager : MonoBehaviour {
 
         currentState = walkingState;
         currentState.EnterState(this);
+
+        lastX = 1;
     }
 
     private void FixedUpdate() {
