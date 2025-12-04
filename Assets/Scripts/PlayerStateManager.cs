@@ -23,6 +23,7 @@ public class PlayerStateManager : MonoBehaviour {
     public PlayerWalkingState walkingState = new PlayerWalkingState();
     public PlayerCrawlingState crawlingState = new PlayerCrawlingState();
     public PlayerAirborneState airborneState = new PlayerAirborneState();
+    public PlayerSlidingState SlidingState = new PlayerSlidingState();
     public PlayerDeadState deadState = new PlayerDeadState();
 
 

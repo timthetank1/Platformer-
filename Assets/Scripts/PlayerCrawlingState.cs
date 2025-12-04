@@ -4,8 +4,10 @@ using UnityEngine;
 public class PlayerCrawlingState : PlayerAbstractState{
     private int turnFrames = 10;
     private int accelFrames = 3;
+    private int turnTimer = 0;
     private float Speed = 8f;
     private float jumpForce = 25;
+
 
     private int facing;
 
@@ -13,6 +15,7 @@ public class PlayerCrawlingState : PlayerAbstractState{
     public override void EnterState(PlayerStateManager context) {
         context.trans.eulerAngles = Vector3.back * 90 * context.lastX;
         facing = context.lastX;
+        turnTimer = turnFrames;
     }
 
     public override void doFrame(PlayerStateManager context) {
@@ -37,10 +40,16 @@ public class PlayerCrawlingState : PlayerAbstractState{
             context.SwitchState(context.walkingState);
         }
         if (context.jumpButton) {
-            context.rb.linearVelocityX *= 1.5f;
-            context.rb.linearVelocityY = jumpForce;
-            context.SwitchState(context.airborneState); 
+            if (turnTimer > 0) {
+                context.rb.linearVelocityX = 30f;
+                context.SwitchState(context.SlidingState);
+            } else {
+                context.rb.linearVelocityX *= 1.5f;
+                context.rb.linearVelocityY = jumpForce;
+                context.SwitchState(context.airborneState);
+            }
         }
+        turnTimer = Mathf.Max(0, turnTimer - 1);
     }
 
     private void ClampSpeed(float a, float b, PlayerStateManager context) {
