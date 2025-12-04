@@ -3,8 +3,7 @@ using UnityEngine;
 public class PlayerAirborneState : PlayerAbstractState {
     private int facing;
     public override void EnterState(PlayerStateManager context) {
-        Debug.Log("Player has entered Airborne state");
-        facing = (int)Mathf.Sign(context.rb.linearVelocityX);
+        facing = (Mathf.Abs(context.rb.linearVelocityX) > 10) ? (int)Mathf.Sign(context.inputX) : 0 ;
     }
 
     public override void doFrame(PlayerStateManager context)
@@ -21,7 +20,9 @@ public class PlayerAirborneState : PlayerAbstractState {
             case < 0:
                 context.rb.linearVelocityX -= facing;
                 break;
-            case 0: break;
+            case 0:
+                context.rb.linearVelocityX += context.inputX * 3;
+                break;
         }
     }
 }

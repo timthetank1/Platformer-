@@ -1,3 +1,4 @@
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR.Haptics;
@@ -56,5 +57,12 @@ public class PlayerStateManager : MonoBehaviour {
     public void SwitchState(PlayerAbstractState state){
         currentState = state;
         state.EnterState(this);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Hazard Layer")) {
+            Debug.Log("Player has collided with a hazard!");
+        }
     }
 }

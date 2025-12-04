@@ -11,7 +11,6 @@ public class PlayerCrawlingState : PlayerAbstractState{
 
 
     public override void EnterState(PlayerStateManager context) {
-        Debug.Log("Hello from the Crawling State");
         context.trans.eulerAngles = Vector3.back * 90 * context.lastX;
         facing = context.lastX;
     }

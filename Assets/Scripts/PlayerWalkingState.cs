@@ -5,12 +5,11 @@ public class PlayerWalkingState : PlayerAbstractState {
     private int turnFrames = 10;
     private int accelFrames = 5;
     private float Speed = 20f;
-    private float jumpForce = 25;
+    private float jumpForce = 27;
 
     private int facing;
 
     public override void EnterState(PlayerStateManager context) {
-        Debug.Log("Player has entered the Walking State.");
         context.trans.eulerAngles = Vector3.zero;
     }
 

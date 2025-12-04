@@ -33,6 +33,4 @@ public class Collision : MonoBehaviour {
     public int wallSide(){
         return (onRightWall()? 1 : 0) - (onLeftWall()? 1 : 0);
     }
-
-
 }
