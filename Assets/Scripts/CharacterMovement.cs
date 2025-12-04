@@ -19,20 +19,25 @@ public class CharacterMovement : MonoBehaviour
     private Vector2 inputDir;
     private float inputX;
     private float inputY;
-
-    
+    private Collider2D _collider;
+    public bool _active = true;
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collision>();
+        _collider = GetComponent<Collider2D>();
     }
 
-    private void Update(){
-        playerInput();
-    }
+
     private void playerInput(){
         jumpButton = jump.action.ReadValue<float>() > 0;
         inputDir = move.action.ReadValue<Vector2>();
         inputX = inputDir.x;
         inputY = inputDir.y;
+    }
+   
+    public void Die()
+    {
+        _active = false;
+        _collider.enabled = false;
     }
 }

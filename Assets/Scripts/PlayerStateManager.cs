@@ -23,6 +23,7 @@ public class PlayerStateManager : MonoBehaviour {
     public PlayerWalkingState walkingState = new PlayerWalkingState();
     public PlayerCrawlingState crawlingState = new PlayerCrawlingState();
     public PlayerAirborneState airborneState = new PlayerAirborneState();
+    public PlayerDeadState deadState = new PlayerDeadState();
 
 
 
@@ -31,7 +32,7 @@ public class PlayerStateManager : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         trans = GetComponent<Transform>();
 
-        currentState = walkingState;
+        currentState = airborneState;
         currentState.EnterState(this);
 
         lastX = 1;
@@ -62,7 +63,7 @@ public class PlayerStateManager : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Hazard Layer")) {
-            Debug.Log("Player has collided with a hazard!");
+            SwitchState(deadState);
         }
     }
 }
