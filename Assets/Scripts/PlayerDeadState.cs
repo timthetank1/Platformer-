@@ -11,7 +11,7 @@ public class PlayerDeadState : PlayerAbstractState
         if (context.jumpButton)
         {
             Debug.Log("Respawning player..."); 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("GUI");
         }
     }
 }
