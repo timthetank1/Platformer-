@@ -4,8 +4,8 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
     [SerializeField] private PlayerStateManager psm;
-    private int screenSnapX = 130;
-    private int screenSnapY = 65;
+    [SerializeField] private int screenSnapX = 130;
+    [SerializeField] private int screenSnapY = 65;
 
 
     void Start() {

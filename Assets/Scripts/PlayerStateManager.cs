@@ -9,6 +9,8 @@ public class PlayerStateManager : MonoBehaviour {
     [SerializeField] public Collision coll;
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] public Transform trans;
+    [SerializeField] public AudioClip DetathSound;
+    [SerializeField] public AudioSource aud;
 
     [SerializeField] public InputActionReference move;
     [SerializeField] public InputActionReference jump;
@@ -26,6 +28,7 @@ public class PlayerStateManager : MonoBehaviour {
     public PlayerAirborneState airborneState = new PlayerAirborneState();
     public PlayerSlidingState SlidingState = new PlayerSlidingState();
     public PlayerDeadState deadState = new PlayerDeadState();
+    
 
 
 
@@ -33,6 +36,8 @@ public class PlayerStateManager : MonoBehaviour {
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
         trans = GetComponent<Transform>();
+        aud = GetComponent<AudioSource>();
+
 
         currentState = airborneState;
         currentState.EnterState(this);
@@ -66,6 +71,7 @@ public class PlayerStateManager : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Hazard Layer")) {
+            aud.PlayOneShot(DetathSound);
             SwitchState(deadState);
         }
     }
