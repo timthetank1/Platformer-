@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraMove : MonoBehaviour
 {
     [SerializeField] private PlayerStateManager psm;
     private int screenSnapX = 130;
@@ -9,7 +9,6 @@ public class Camera : MonoBehaviour
 
 
     void Start() {
-        psm = GameObject.Find("Player").GetComponent<PlayerStateManager>();
     }
 
     // Update is called once per frame

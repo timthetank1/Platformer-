@@ -14,6 +14,7 @@ public class PlayerStateManager : MonoBehaviour {
     [SerializeField] public InputActionReference jump;
 
     public bool jumpButton  { get; private set; }
+    private bool jumpPressed;
     public Vector2 inputDir { get; private set; }
     public float inputX     { get; private set; }
     public float inputY     { get; private set; }
@@ -46,7 +47,8 @@ public class PlayerStateManager : MonoBehaviour {
 
 
     private void playerInput(){
-        jumpButton = jump.action.ReadValue<float>() > 0;
+        jumpButton = (jump.action.ReadValue<float>() > 0) & !jumpPressed;
+        jumpPressed = (jump.action.ReadValue<float>() > 0);
         inputDir = move.action.ReadValue<Vector2>();
         inputX = inputDir.x;
         inputY = inputDir.y;

@@ -41,7 +41,7 @@ public class PlayerCrawlingState : PlayerAbstractState{
         }
         if (context.jumpButton) {
             if (turnTimer > 0) {
-                context.rb.linearVelocityX = 30f;
+                context.rb.linearVelocityX = 40f * facing;
                 context.SwitchState(context.SlidingState);
             } else {
                 context.rb.linearVelocityX *= 1.5f;
