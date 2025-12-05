@@ -8,12 +8,13 @@ public class PlayerSlidingState : PlayerAbstractState {
     public override void EnterState(PlayerStateManager context) {
         context.trans.eulerAngles = Vector3.back * 90 * context.lastX;
         slideTimer = slideFrames;
+        facing = (int)Mathf.Sign(context.rb.linearVelocityX);
 
     }
 
     public override void doFrame(PlayerStateManager context) {
         if (context.jumpButton) { 
-            context.rb.linearVelocityX = 70f;
+            context.rb.linearVelocityX = 70f * facing;
             context.rb.linearVelocityY = 50f;
             context.SwitchState(context.airborneState);
         }
