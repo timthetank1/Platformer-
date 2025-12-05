@@ -9,7 +9,8 @@ public class PlayerStateManager : MonoBehaviour {
     [SerializeField] public Collision coll;
     [SerializeField] public Rigidbody2D rb;
     [SerializeField] public Transform trans;
-    [SerializeField] public AudioClip DetathSound;
+    [SerializeField] public AudioClip DeathSound;
+    [SerializeField] public AudioClip Musik;
     [SerializeField] public AudioSource aud;
 
     [SerializeField] public InputActionReference move;
@@ -21,7 +22,7 @@ public class PlayerStateManager : MonoBehaviour {
     public float inputX     { get; private set; }
     public float inputY     { get; private set; }
     public int lastX        { get; private set; }
-
+    public int timer = 3;
     public PlayerAbstractState currentState;
     public PlayerWalkingState walkingState = new PlayerWalkingState();
     public PlayerCrawlingState crawlingState = new PlayerCrawlingState();
@@ -48,6 +49,17 @@ public class PlayerStateManager : MonoBehaviour {
     private void FixedUpdate() {
         playerInput();
         currentState.doFrame(this);
+        if (timer == 0)
+        {
+            aud.clip = Musik;
+            aud.loop = true;
+            aud.Play();
+            timer = -1;
+        }
+        else if (timer > 0)
+        {
+            timer--;
+        }
     }
 
 
@@ -71,7 +83,7 @@ public class PlayerStateManager : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Hazard Layer")) {
-            aud.PlayOneShot(DetathSound);
+            aud.PlayOneShot(DeathSound);
             SwitchState(deadState);
         }
     }
